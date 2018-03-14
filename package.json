@@ -4,6 +4,7 @@
   "descrinode ption": "",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^3.21.2"
   },
   "devDependencies": {},
