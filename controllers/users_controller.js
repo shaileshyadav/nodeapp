@@ -7,19 +7,20 @@ var UserModel = new user();
 exports.create = function(req, res) {
 
   if(req.method.toLowerCase() != "post") {
-    res.render("signup.html", {layout: false});
+    res.render("signup", {layout: false});
   }
   else {
      new user(req.body).save();
      res.send("ok");
   }
+  console.log("create functi");
 
 }
 
 exports.login = function(req, res) {
 
   if(req.method.toLowerCase() != "post") {
-    res.render("login.html", {layout: false});
+    res.render("login", {layout: false});
   }
   else {
     user.findOne({email: req.body.email}, function(err, result) {
@@ -47,4 +48,5 @@ exports.login = function(req, res) {
       }
     }
   }
+    console.log("login functi");
 }
