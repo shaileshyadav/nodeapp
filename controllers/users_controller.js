@@ -13,6 +13,7 @@ exports.create = function(req, res) {
      new user(req.body).save();
      res.send("ok");
   }
+  console.log("create functi");
 
 }
 
@@ -47,4 +48,5 @@ exports.login = function(req, res) {
       }
     }
   }
+    console.log("login functi");
 }
