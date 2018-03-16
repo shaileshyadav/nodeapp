@@ -11,9 +11,11 @@ mongoose.connect('mongodb://localhost/nodeAuth');
 //configure app
 //app.configure(function() {
   app.set('views', __dirname + '/views');
-  //app.engine('html', engines.mustache);
-  app.engine('html', require('ejs').renderFile);
-  app.set('view engine', 'html');
+
+  //app.engine('html', require('ejs').renderFile);
+  //app.set('view engine', 'html');
+  app.set('view engine','jade');
+
   app.set('view_options', {layout : false});
   app.use(express.bodyParser());
   app.use(express.methodOverride());

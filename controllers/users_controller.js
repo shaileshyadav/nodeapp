@@ -7,7 +7,7 @@ var UserModel = new user();
 exports.create = function(req, res) {
 
   if(req.method.toLowerCase() != "post") {
-    res.render("signup.html", {layout: false});
+    res.render("signup", {layout: false});
   }
   else {
      new user(req.body).save();
@@ -20,7 +20,7 @@ exports.create = function(req, res) {
 exports.login = function(req, res) {
 
   if(req.method.toLowerCase() != "post") {
-    res.render("login.html", {layout: false});
+    res.render("login", {layout: false});
   }
   else {
     user.findOne({email: req.body.email}, function(err, result) {
